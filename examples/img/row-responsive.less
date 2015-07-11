@@ -1,0 +1,18 @@
+/** ROW RESPONSIVE  ************************************************/
+/** WARN : the gutter and responsive must be the same as the column
+/** @responsive : screen width where the column will be 100% (px)
+/** @gutter : column spacing (px)
+/*******************************************************************/
+.row-responsive(@responsive:768, @gutter:30){
+	@gap : (@gutter/2);
+	font-size:0;
+	margin: 0 ~"-@{gap}px";
+	&:after{
+		display:inline-block;
+		width:100%;
+	}
+	@media (max-width: ~"@{responsive}px") {
+		margin: 0;
+	}
+
+}

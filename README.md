@@ -75,7 +75,7 @@ LESS
 
 >In this example, there are 4 columns with a 15px spacing and responsive about 768px. **See the result :**
 
-![Usage example Inline grid system](https://github.com/IsaBartkowiak/inline-grid-system/blob/master/img/example1.jpg?raw=true)
+![Usage example Inline grid system](https://github.com/IsaBartkowiak/inline-grid-system/blob/master/examples/img/example1.jpg?raw=true)
 
 ####Responsive columns fullscreen without spacing
 HTML
@@ -107,7 +107,7 @@ LESS
 
 > In this example, there are 4 columns fullscreen and responsive about 768px. **See the result:**
 
-![usage example inline grid system with fullscreen columns](https://github.com/IsaBartkowiak/inline-grid-system/blob/master/img/example2.jpg?raw=true)
+![usage example inline grid system with fullscreen columns](https://github.com/IsaBartkowiak/inline-grid-system/blob/master/examples/img/example2.jpg?raw=true)
 
 
 ####Developer

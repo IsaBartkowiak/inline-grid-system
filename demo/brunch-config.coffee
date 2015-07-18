@@ -11,8 +11,7 @@ exports.config =
         ]
     stylesheets:
       joinTo:
-        'stylesheets/test.css': /^app\/less\/test.less/
-        'stylesheets/ie-lt9.css': /^app\/less\/ie-lt9.less/
+        'stylesheets/app.css': /^app\/less\/app.less/
   watcher:
     usePolling: true
   modules:

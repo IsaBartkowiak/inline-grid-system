@@ -21,6 +21,7 @@ SOON
 ```
 *Make me a row with a `@gutter` pixel gutter*
 *Make me a col `@int` with a `@gutter` pixel gutter*
+
 Variables| Description| Unit | Default value
 --- | --- | --- | --- |
 `@gutter` | column spacing | pixel | 30px
@@ -33,6 +34,7 @@ Variables| Description| Unit | Default value
 .become-col(@int, @responsive);
 ```
 *Become a col `@int` less than `@responsive` pixel width*
+
 Variables| Description| Unit | Default value
 --- | --- | --- | --- |
 `@int` | desired columns, like bootstrap | integer  | none
@@ -45,6 +47,7 @@ Variables| Description| Unit | Default value
 .col-responsive(@int, @responsive, @gutter);
 ```
 *Make a col `@int` with a `@gutter` pixel gutter and will be 100% width less than `@responsive` pixels*
+
 Variables| Description| Unit | Default value
 --- | --- | --- | --- |
 `@responsive` | screen width where the column will be 100% width | pixel | 768px

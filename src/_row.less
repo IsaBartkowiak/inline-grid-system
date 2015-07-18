@@ -5,9 +5,11 @@
 .row(@gutter:30){
 	@gap : (@gutter/2);
 	font-size:0;
-	margin: 0 ~"-@{gap}px";
 	&:after{
 		display:inline-block;
 		width:100%;
+	}
+	@media (min-width: 768px) {
+		margin: 0 ~"-@{gap}px";
 	}
 }

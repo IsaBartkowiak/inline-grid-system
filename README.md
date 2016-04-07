@@ -14,47 +14,59 @@ SOON
 
 ##Usage
 
-###Basic columns & rows
-```less
-.row(@gutter);
-.col(@int, @gutter);
+###Basic markup
+
+**La seule contrainte est de créer une div contenant vos colonnes (qui servira de row). Vos colonnes doivent avoir la classe ".col"
+
+```html
+<div class="grid">
+	<div class="col"></div>
+	<div class="col"></div>
+	<div class="col"></div>
+	<div class="col"></div>
+</div>
 ```
-*Make me a row with a `@gutter` pixel gutter*
-*Make me a col `@int` with a `@gutter` pixel gutter*
+
+```scss
+.grid{
+	@include grid(@col, @gutter);
+}
+```
+
+```less
+.grid{
+	.grid(@col, @gutter)
+}
+```
+*Make @col columns
 
 Variables| Description| Unit | Default value
 --- | --- | --- | --- |
+`@col` | desired columns, like bootstrap | integer  | none
 `@gutter` | column spacing | pixel | 30px
-`@int` | desired columns, like bootstrap | integer  | none
 
-**WARNING:  the `@gutter`  must be the same as the column**
 
 ###Breakpoint management
-```less
-.become-col(@int, @responsive);
+```scss
+.grid{
+	@include become-grid(@col, @gutter, @breakpoint);
+}
+```
+
+```scss
+.grid{
+	.become-grid(@col, @gutter, @breakpoint);
+}
 ```
 *Become a col `@int` less than `@responsive` pixel width*
 
 Variables| Description| Unit | Default value
 --- | --- | --- | --- |
-`@int` | desired columns, like bootstrap | integer  | none
-``@responsive` | responsive breakpoint | pixel | none
-
-**WARNING:  Use this mixin only if a .col() is initialized**
-
-###Responsive columns
-```less
-.col-responsive(@int, @responsive, @gutter);
-```
-*Make a col `@int` with a `@gutter` pixel gutter and will be 100% width less than `@responsive` pixels*
-
-Variables| Description| Unit | Default value
---- | --- | --- | --- |
-`@responsive` | screen width where the column will be 100% width | pixel | 768px
+`@col` | desired columns, like bootstrap | integer  | none
 `@gutter` | column spacing | pixel | 30px
-`@int` | desired columns, like bootstrap | integer | none
+``@breakpoint` | responsive breakpoint | pixel | none
 
-**WARNING:  the `@gutter`  and `@responsive` and must be the same as the column**
+**WARNING:  Use this mixin only if a grid is initialized**
 
 ----------
 
@@ -66,31 +78,42 @@ Variables| Description| Unit | Default value
 HTML
 
 ```html
-<div class="bloc container"> //container like bootstrap
-	<div class="bloc-row">
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
+<div class="container"> //container like bootstrap
+	<div class="bloc-grid">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
 	</div>
 </div>
 ```
+
+SCSS
+
+```scss
+.bloc{
+	&-grid{
+		@include grid(4,30);
+		@include become-grid(12,30,768);
+	}	
+}
+```
+
+
 LESS
 
 ```less
 .bloc{
-	&-row{
-		.row(15);
+	&-grid{
+		.grid(4,30);
+		.include become-grid(12,30,768);
 	}	
-	&-column{
-		.col-responsive(4, 768, 15);
-	}
 }
 ```
 
->In this example, there are 3 columns per line with a 15px spacing and responsive about 768px. **See the result :**
+>In this example, there are 3 columns per line with a 30px spacing and responsive about 768px. **See the result :**
 
 ![Inline grid system, example 1](http://www.zupimages.net/up/15/29/kx0l.jpg)
 
@@ -99,25 +122,35 @@ HTML
 
 ```html
 <div class="bloc">
-	<div class="bloc-row">
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
+	<div class="bloc-grid">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
 	</div>
 </div>
 ```
+
+SCSS
+
+```scss
+.bloc{	
+	&-grid{
+		@include grid(4,0);
+		@include become-grid(12,0,768);
+	}
+}
+```
+
 LESS
 
 ```less
-.bloc{
-	&-row{
-		.row(0);
-	}	
-	&-column{
-		.col-responsive(4, 768, 0);
+.bloc{	
+	&-grid{
+		.grid(4,0);
+		.become-grid(12,0,768);
 	}
 }
 ```
@@ -130,27 +163,38 @@ HTML
 
 ```html
 <div class="bloc">
-	<div class="bloc-row">
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
-		<div class="bloc-column"></div>
+	<div class="bloc-grid">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
 	</div>
 </div>
 ```
+SCSS
+
+```scss
+.bloc{	
+	&-grid{
+		@include grid(4,30);
+		@include become-grid(6,800);
+		@include become-grid(12,30);
+	}
+}
+```
+
+
+
 LESS
 
 ```less
-.bloc{
-	&-row{
-		.row(30);
-	}	
-	&-column{
-		.col(4,30);
-		.become-col(6,800);
-		.become-col(12,30);
+.bloc{	
+	&-grid{
+		.grid(4,30);
+		.become-grid(6,800);
+		.become-grid(12,30);
 	}
 }
 ```
@@ -161,71 +205,86 @@ LESS
 
 ####Create your own grid system
 
+SCSS
+
+```scss
+
+@for $i from 1 through 12 {
+ 	.grid-#{$i} { 
+ 		@include grid(#{$i}, 30);
+ 	}
+ }
+
+@for $i from 1 through 12 {
+ 	.md-grid-#{$i} { 
+ 		@include become-grid(#{$i}, 30, 992);
+ 	}
+}
+
+@for $i from 1 through 12 {
+ 	.xs-grid-#{$i} { 
+ 		@include become-grid(#{$i}, 30, 768);
+ 	}
+}
+```
+
 LESS
 
 ```less
-/******* row ******/
-.row-g30{
-	.row(30);
-}
-.row-g0{
-	.row(0);
-}
-
 /******* cols ******/
-.col-g30{
+.grid{
 	&-1{
-		.col(1,30); 
+		.grid(1,30); 
 	}
 	&-2{
-		.col(2,30); 
+		.grid(2,30); 
 	}
 	&-3{
-		.col(3,30); 
+		.grid(3,30); 
 	}
 	&-4{
-		.col(4,30); 
+		.grid(4,30); 
 	}
 	...
 }
 
 /******* responsive ******/
-.md{
+
+.md-grid{
 	&-12{
-		.become-col(12,992); 
+		.become-grid(12,992); 
 	}
 	&-6{
-		.become-col(6,992); 
+		.become-grid(6,992); 
 	}
 	&-4{
-		.become-col(4,992); 
+		.become-grid(4,992); 
 	}
 }
-.xs{
+.xs-grid{
 	&-12{
-		.become-col(12,768); 
+		.become-grid(12,768); 
 	}
 	&-6{
-		.become-col(6,768); 
+		.become-grid(6,768); 
 	}
 	&-4{
-		.become-col(4,768); 
+		.become-grid(4,768); 
 	}
 }
-
-
 ```
+
 HTML
 
 ```html
 <div class="container">
-	<div class="row-g30">
-		<div class="col-g30-4 md-6 xs-12"></div>
-		<div class="col-g30-4 md-6 xs-12"></div>
-		<div class="col-g30-4 md-6 xs-12"></div>
-		<div class="col-g30-4 md-6 xs-12"></div>
-		<div class="col-g30-4 md-6 xs-12"></div>
-		<div class="col-g30-4 md-6 xs-12"></div>
+	<div class="grid-3 xs-grid-6 md-grid-12">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
 	</div>
 </div>
 ```

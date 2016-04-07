@@ -1,0 +1,19 @@
+/** grid ***************************************************/
+/** @col : desired columns, like bootstrap (int or float).
+/** @gutter : column spacing (px)
+/*************************************************************/
+.grid(@col,@gutter:30){
+	font-size:0;
+	@width : 100/(12/@col);
+	@gap : @gutter/2;
+	margin-left:  ~"-@{gap}px";
+	margin-right: ~"-@{gap}px";
+	.col{
+		font-size:initial;
+		position: relative;
+		display:inline-block;
+		vertical-align: top;
+		width: ~"@{width}%";
+		padding: 0 ~"@{gap}px";
+	}
+}

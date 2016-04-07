@@ -1,0 +1,12 @@
+/** BECOME COL************************************************/
+/** Use only if a col is already init
+/** @int : desired columns, like bootstrap (int).
+/** @responsive : breakpoint (px)
+/*************************************************************/
+
+.become-col(@int, @responsive){
+	@value : 100/(12/@int);
+	@media (max-width: ~"@{responsive}px") {
+		width: ~"@{value}%";
+	}	
+}

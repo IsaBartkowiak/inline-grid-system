@@ -1,0 +1,45 @@
+.header{
+	//********* LOGO *********//
+	&-logo {
+		min-height:80px;
+		line-height: 80px;
+		text-align: center;
+		&--img{
+			display: inline-block;
+			width:auto;
+			margin:0 auto;
+			vertical-align: middle;
+		}
+	}
+	//********* COVER *********//
+	&-cover{
+		background-image: url(../img/cover.jpg);
+		height: 360px;
+		line-height: 360px;
+		width:100%;
+		color:white;
+		background-size: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		text-align: center;
+		&--overlay{
+			position: absolute;
+			height:360px;
+			width:100%;
+			background-color: @blue;
+			.opacity(0.5);
+		}
+		&--content{
+			position: relative;
+			line-height: normal;
+			display: inline-block;
+			vertical-align: middle;
+			text-align: left;
+			pre{
+				display: inline-block;
+				background-color: @dark-blue;
+				padding: 15px 20px;
+			}
+		}
+	}
+}

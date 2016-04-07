@@ -1,0 +1,246 @@
+
+body{
+	margin:0;
+	.montserrat-l();
+	margin:0;
+	moz-osx-font-smoothing: grayscale;
+	moz-osx-font-smoothing: grayscale;
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	.transition(all .4s ease);
+	&:before{
+		content:none;
+	}
+	&._active:before{
+		content: '';
+		display: block;
+		position: fixed;
+		top: 0;
+		z-index: 200;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.22);
+	}
+}
+
+section, section.container{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+p, ul, li, a{
+	.montserrat-l();
+}
+
+a{
+	text-decoration: none;
+}
+
+.code-button{
+	padding: 5px 15px;
+	color:white;
+	font-size:14px;
+	.montserrat-r();
+	background-color: #b4b4b4;
+}
+
+.column-text{
+	.montserrat-r();
+	text-transform: uppercase;
+	color:#d6d5d2;
+	font-size:20px;
+	line-height:normal;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+less */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+ 	color: black;
+ 	text-shadow: 0 1px white;
+ 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+ 	direction: ltr;
+ 	text-align: left;
+ 	white-space: pre;
+ 	word-spacing: normal;
+ 	word-break: normal;
+ 	line-height: 1.5;
+
+ 	-moz-tab-size: 4;
+ 	-o-tab-size: 4;
+ 	tab-size: 4;
+
+ 	-webkit-hyphens: none;
+ 	-moz-hyphens: none;
+ 	-ms-hyphens: none;
+ 	hyphens: none;
+ }
+
+ pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+ 	text-shadow: none;
+ 	background: #b3d4fc;
+ }
+
+ pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+ code[class*="language-"]::selection, code[class*="language-"] ::selection {
+ 	text-shadow: none;
+ 	background: #b3d4fc;
+ }
+
+ @media print {
+ 	code[class*="language-"],
+ 	pre[class*="language-"] {
+ 		text-shadow: none;
+ 	}
+ }
+
+ /* Code blocks */
+ pre[class*="language-"] {
+ 	padding: 1em;
+ 	margin:  0;
+ 	overflow: auto;
+ }
+
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+ 	background: #f5f2f0;
+ }
+
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+ 	padding: .1em;
+ 	border-radius: .3em;
+ }
+
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+ 	color: slategray;
+ }
+
+ .token.punctuation {
+ 	color: #999;
+ }
+
+ .namespace {
+ 	opacity: .7;
+ }
+
+ .token.property,
+ .token.tag,
+ .token.boolean,
+ .token.number,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+ 	color: #905;
+ }
+
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+ 	color: #690;
+ }
+
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string {
+ 	color: #a67f59;
+ 	background: hsla(0, 0%, 100%, .5);
+ }
+
+ .token.atrule,
+ .token.attr-value,
+ .token.keyword {
+ 	color: #07a;
+ }
+
+ .token.function {
+ 	color: #DD4A68;
+ }
+
+ .token.regex,
+ .token.important,
+ .token.variable {
+ 	color: #e90;
+ }
+
+ .token.important,
+ .token.bold {
+ 	font-weight: bold;
+ }
+ .token.italic {
+ 	font-style: italic;
+ }
+
+ .token.entity {
+ 	cursor: help;
+ }
+
+
+/******* row ******/
+.row-g30{
+    .row(30);
+}
+.row-g0{
+    .row(0);
+}
+
+/******* cols ******/
+.col-g30{
+    &-1{
+        .col(1,30); 
+    }
+    &-2{
+        .col(2,30); 
+    }
+    &-3{
+        .col(3,30); 
+    }
+    &-4{
+    	height:120px;
+        .col(4,30); 
+    }
+  
+}
+
+/******* responsive ******/
+.md{
+    &-12{
+        .become-col(12,992); 
+    }
+    &-6{
+        .become-col(6,992); 
+    }
+    &-4{
+        .become-col(4,992); 
+    }
+}
+.xs{
+    &-12{
+        .become-col(12,768); 
+    }
+    &-6{
+        .become-col(6,768); 
+    }
+    &-4{
+        .become-col(4,768); 
+    }
+}

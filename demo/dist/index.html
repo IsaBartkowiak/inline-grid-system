@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="{page:self:language}" data-page="{page:self:id}">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inline grid system</title>
+
+	<meta name="description" content="{page:self:description}">
+	<meta name="keywords" content="{page:self:keywords}">
+
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@[site]" />
+	<meta name="twitter:creator" content="[creator]" />
+	<meta name="twitter:url" content="{page:accueil:url}" />
+	<meta name="twitter:title" content="[name] - {page:self:title}" />
+	<meta name="twitter:description" content="{page:accueil:url}" />
+
+
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="{page:accueil:url}" />
+	<meta property="og:title" content="[name] - {page:self:title}" />
+	<meta property="og:description" content="{page:accueil:url}" />
+	<meta property="og:site_name" content="{page:root:}" />
+
+	<meta property="og:image" content="{page:root:url}/[path-to-img]" />
+
+		<!--
+		use -> http://realfavicongenerator.net/ -->
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/favicons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/favicons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/favicons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/favicons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/favicons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/favicons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/favicons/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="./assets/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="./assets/favicons/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="./assets/favicons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="./assets/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="./assets/favicons/manifest.json">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="stylesheet" href="styles/app.css" />
+	</head>
+
+	<body>
+		<header>
+			<div class="header">
+				<div class="header-logo">
+					<h1><img src="img/inline-grid-logo.png" alt="" class="header-logo--img"></h1>
+				</div>
+				<div class="header-cover" data-0="background-position: 50% -200px;" data-top-bottom="background-position: 50% 100px;">
+					<div class="header-cover--overlay"></div>
+					<div class="header-cover--content container">
+						<h2>About</h2>
+						<p>Inline-block grid system is an alternative to bootstrap for creating columns. It is a grid of 12 columns with custom gutters. Only the bootstrap class `.container` was preserved.</p>
+						<pre><code class="">npm install inline-grid-system</code></pre>
+						<a href="">Download</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main>
+
+
+			<section class="one container">
+				<span class="section-number">01.</span>
+				<h2>Responsive columns</h2>
+				<a href="#" class="button code-button">see code ▶</a>
+				<div class="tab">
+					<a href="#" class="tab-close"></a>
+					<a href="#" id="html" class="tab-button _active">html</a>
+					<a href="#" id="less" class="tab-button">less</a>
+					<div class="tab-content html _active">
+						<pre>
+							<code class="language-markup">
+								&lt;div class="bloc-grid">
+								&lt;div class="bloc-row">
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+								&lt;/div>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="tab-content less">
+						<pre>
+							<code class="language-less">
+								.test{
+								.row-responsive(768,0);
+							}
+						</code>
+					</pre>
+				</div>
+			</div>
+			<div class="one-grid">
+				<div class="col one-col">
+					<div class="one-content"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+				<div class="col one-col">
+					<div class="one-content"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+				<div class="col one-col">
+					<div class="one-content"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+				<div class="col one-col">
+					<div class="one-content"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+				<div class="col one-col">
+					<div class="one-content"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+				<div class="col one-col">
+					<div class="one-content"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+				<div class="col one-col">
+					<div class="one-content"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section class="two">
+			<div class="container">
+				<span class="section-number">02.</span>
+				<h2>Fullscreen columns</h2>
+				<a href="#" class="button code-button">see code ▶</a>
+				<div class="tab">
+					<a href="#" class="tab-close"></a>
+					<a href="#" id="html" class="tab-button _active">html</a>
+					<a href="#" id="less" class="tab-button">less</a>
+					<div class="tab-content html _active">
+						<pre>
+							<code class="language-markup">
+								&lt;div class="bloc-grid">
+								&lt;div class="bloc-row">
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+
+								&lt;div class="bloc-column">
+								&lt;div class="bloc-content">
+								&lt;p class="column-text">I am a responsive column 4&lt;/p>
+								&lt;/div>
+								&lt;/div>
+								&lt;/div>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="tab-content less">
+						<pre>
+							<code class="language-less">
+								.test{
+								.row-responsive(768,0);
+							}
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+
+		<div class="two-grid">
+			<div class="two-row">
+				<div class="two-column">
+					<div class="two-content one"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+				<div class="two-column">
+					<div class="two-content two"><p class="column-text">I am a responsive column 4</p></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+<div class="container">
+	<div class="grid-4 md-grid-6 xs-grid-12">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+	</div>
+</div>
+
+
+</main>
+
+		<script id="__bs_script__">//<![CDATA[
+		document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.11.2.js'><\/script>".replace("HOST", location.hostname));
+		//]]></script>
+
+		<script src="js/vendor.js"></script>
+		<script src="js/app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+
+
+		<script type="text/javascript">
+		$(function () {
+			$.srSmoothscroll();
+		})
+		$(document).ready(function() {
+			$('pre code').each(function(i, block) {
+				hljs.highlightBlock(block);
+			});
+		});
+		var s = skrollr.init();
+
+		</script> 
+	</div>
+	<div class="overlay"></div>
+</body>
+</html>

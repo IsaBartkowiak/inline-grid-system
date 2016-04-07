@@ -1,0 +1,23 @@
+/** grid ***************************************************/
+/** @col : desired columns, like bootstrap (int or float).
+/** @gutter : column spacing (px)
+/*************************************************************/
+@mixin grid($col,$gutter:30){
+	font-size:0;
+	$width : 100/(12/$col);
+	$gap : $gutter/2;
+	@if $gap != 0{
+		margin-left: $gap * -1px;
+		margin-right: $gap * -1px;
+	}
+	.col{
+		font-size:initial;
+		position: relative;
+		display:inline-block;
+		vertical-align: top;
+		width: $width * 1%;
+		@if $gap != 0{
+			padding: 0 ($gap*1px);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.retina-image(@file, @type, @repeat, @width, @height, @posx, @posy) {
+  background-image: url('@{file}.@{type}');
+  background-repeat: @repeat;
+  background-position: @posx @posy;
+ 
+  @media print, screen,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (~`"-o-min-device-pixel-ratio: 1.25/1"`),
+    (min--moz-device-pixel-ratio: 1.25),
+    (-moz-min-device-pixel-ratio: 1.25),
+    (-ms-min-device-pixel-ratio: 1.25),
+    (min-device-pixel-ratio: 1.25),
+    (min-resolution: 120dpi),
+    (min-resolution: 1.25dppx) {
+      background-size: @width @height;
+      background-image: url('@{file}@2x.@{type}');
+      background-position: @posx * 2 @posy * 2;
+    }
+}

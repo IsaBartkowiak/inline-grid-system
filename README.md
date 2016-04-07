@@ -9,14 +9,11 @@ Inline-block grid system is an alternative to bootstrap for creating columns. It
  - Custom gutters
 
 ----------
-##Live demo
-SOON
 
-##Usage
 
 ###Basic markup
 
-**La seule contrainte est de créer une div contenant vos colonnes (qui servira de row). Vos colonnes doivent avoir la classe ".col" **
+**La seule contrainte est de créer une div contenant vos colonnes (qui servira de row). Vos colonnes doivent avoir la classe ".col"**
 
 ```html
 <div class="grid">

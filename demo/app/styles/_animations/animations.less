@@ -1,0 +1,47 @@
+@import "_keyframes/bounce.less";
+@import "_keyframes/bounceIn.less";
+@import "_keyframes/bounceInDown.less";
+@import "_keyframes/bounceInLeft.less";
+@import "_keyframes/bounceInRight.less";
+@import "_keyframes/bounceInUp.less";
+@import "_keyframes/fadeIn.less";
+@import "_keyframes/fadeInDown.less";
+@import "_keyframes/fadeInDownBig.less";
+@import "_keyframes/fadeInLeft.less";
+@import "_keyframes/fadeInLeftBig.less";
+@import "_keyframes/fadeInRight.less";
+@import "_keyframes/fadeInRightBig.less";
+@import "_keyframes/fadeInUp.less";
+@import "_keyframes/fadeInUpBig.less";
+@import "_keyframes/fadeOut.less";
+@import "_keyframes/fadeOutDown.less";
+@import "_keyframes/fadeOutDownBig.less";
+@import "_keyframes/fadeOutLeft.less";
+@import "_keyframes/fadeOutLeftBig.less";
+@import "_keyframes/fadeOutRight.less";
+@import "_keyframes/fadeOutRightBig.less";
+@import "_keyframes/fadeOutUp.less";
+@import "_keyframes/fadeOutUpBig.less";
+@import "_keyframes/flip.less";
+@import "_keyframes/flipInX.less";
+@import "_keyframes/flipInY.less";
+@import "_keyframes/flipOutX.less";
+@import "_keyframes/flipOutY.less";
+
+
+.animation(@name, @duration:1s, @delay:0) {
+	&.animated{
+		-webkit-animation-name: @name;
+		-moz-animation-name: @name;
+		-o-animation-name: @name;
+		animation-name: @name;
+		-webkit-animation-duration:@duration;
+		-moz-animation-duration:@duration;
+		-o-animation-duration:@duration;
+		animation-duration:@duration;
+		-webkit-animation-fill-mode: both;
+		-moz-animation-fill-mode: both;
+		-o-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+}

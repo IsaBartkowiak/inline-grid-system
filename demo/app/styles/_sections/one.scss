@@ -1,0 +1,18 @@
+.one{
+	&-grid{
+		@include grid(4,30);
+		@include become-grid(6,30, 768);
+		@include become-grid(12,30, 500);
+		margin-top:20px;
+	}
+	&-col{
+		margin-bottom:30px;
+	}
+	&-content{
+		min-height:180px;
+		line-height:180px;
+		background-color:$grey;
+		text-align:center;
+		padding: 0 40px;
+	}
+}

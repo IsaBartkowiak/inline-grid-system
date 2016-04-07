@@ -1,0 +1,40 @@
+@input-border-focus : black;
+
+
+body{
+	margin:0;
+	moz-osx-font-smoothing: grayscale;
+	moz-osx-font-smoothing: grayscale;
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: antialiased;
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+
+input, textarea{
+	.transition(all .5s ease);
+	border-width:1px;
+	&:focus{
+		outline-offset: 0;
+		box-shadow: none;
+		outline:none;
+		text-shadow:none;
+		border-color: @input-border-focus;
+
+	}
+}
+
+
+ul{ list-style: circle; }
+ul ul, ol ul{ list-style: disc inside; margin-bottom: 0; overflow: hidden; }
+ol{ list-style: decimal; }
+ol ol, ul ol{ list-style: lower-roman inside; margin-bottom: 0; overflow: hidden; }
+
+a {
+	background-color: transparent;
+	&:active, &:hover, &:focus{
+		outline: 0;
+	}
+}

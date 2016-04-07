@@ -1,0 +1,17 @@
+/** Become grid  *****************************************************/
+/** @col : desired columns, like bootstrap (int or float).
+/** @gutter : column spacing (px)
+/** @responsive : breakpoint (px)
+/*************************************************************/
+.become-grid(@col, @gutter, @breakpoint){
+	@width : 100/(12/@col);
+	@gap : @gutter/2;
+	@media (max-width: ~"@{responsive}px") {
+		margin-left:  ~"-@{gap}px";
+		margin-right:  ~"-@{gap}px";
+		.col{
+			width: ~"@{width}%";
+			padding: 0 ~"@{gap}px";
+		}
+	}	
+}

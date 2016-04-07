@@ -1,0 +1,15 @@
+/** ROW  *****************************************************/
+/** WARNING : the gutter must be the same as the column
+/** @gutter : column spacing (px)
+/*************************************************************/
+.row(@gutter:30){
+	@gap : (@gutter/2);
+	font-size:0;
+	&:after{
+		display:inline-block;
+		width:100%;
+	}
+	@media (min-width: 768px) {
+		margin: 0 ~"-@{gap}px";
+	}
+}

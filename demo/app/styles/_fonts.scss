@@ -1,0 +1,24 @@
+/*** Fichier destiné à l'import de font et aux mixins associés ***/
+
+
+$font-path : '../fonts';
+$font-name1 : 'montserrat-b-webfont';
+$font-name2 : 'montserrat-sb-webfont';
+$font-name3 : 'montserrat-r-webfont';
+$font-name4 : 'montserrat-l-webfont';
+
+
+
+@include fontface($font-path, $font-name1);
+$montserrat-b: $font-name1;
+
+@include fontface($font-path, $font-name2);
+$montserrat-sb: $font-name2;
+
+@include fontface($font-path, $font-name3);
+$montserrat-r: $font-name3;
+
+@include fontface($font-path, $font-name4);
+$montserrat-l: $font-name4;
+
+

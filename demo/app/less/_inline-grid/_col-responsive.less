@@ -1,0 +1,19 @@
+/** RESPONSIVE COLUMN *********************************************/
+/** @int : desired columns, like bootstrap (int).
+/** @responsive : screen width where the column will be 100% (px)
+/** @gutter : column spacing (px)
+/******************************************************************/
+.col-responsive(@int, @responsive:768, @gutter:30){
+	@value : 100/(12/@int);
+	@gap : (@gutter/2);
+	width:100%;
+	margin: ~"@{gap}px" 0;
+	font-size:initial;
+	position: relative;
+	display:inline-block;
+	vertical-align: top;
+	@media (min-width: ~"@{responsive}px") {
+		width: ~"@{value}%";
+		padding: 0 ~"@{gap}px";
+	}	
+}

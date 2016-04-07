@@ -1,0 +1,78 @@
+//------------------------------------------  GRID ------------------------------------------------ //
+// ------------------------------------------------------------------------------------------------ //
+
+/** ROW RESPONSIVE  *******************************************/
+/** WARN : doit être la même valeur que dans les colonnes
+/** @gutter : marge entre les colonnes
+/*************************************************************/
+.row(@gutter:30){
+	@gap : (@gutter/2);
+	font-size:0;
+	margin: 0 ~"-@{gap}px";
+	&:after{
+		display:inline-block;
+		width:100%;
+	}
+}
+
+/** ROW RESPONSIVE  *******************************************/
+/** WARN : doivent être les mêmes valeurs que dans les colonnes
+/** @responsive : largeur du device ou la colonne sera à 100%
+/** @gutter : marge entre les colonnes
+/*************************************************************/
+.row-responsive(@responsive:768, @gutter:30){
+	@gap : (@gutter/2);
+	font-size:0;
+	margin: 0 ~"-@{gap}px";
+	&:after{
+		display:inline-block;
+		width:100%;
+	}
+	@media (max-width: ~"@{responsive}px") {
+		margin: 0;
+	}
+
+}
+
+
+
+/** COLONNES *************************************************/
+/** @int : taille de colonnes désirée (comme bootstrap).
+/** @gap : marge entre les colonnes
+/*************************************************************/
+.col(@int, @gutter:30){
+	@value : 100/(12/@int);
+	@gap : (@gutter/2);
+	font-size:initial;
+	position: relative;
+	word-break: break-word;
+	display:inline-block;
+	vertical-align: top;
+	white-space: normal;
+	width: ~"@{value}%";
+	padding: 0 ~"@{gap}px";
+}
+
+/** COLONNES RESPONSIVE ***************************************/
+/** @int : taille de colonnes désirée (comme bootstrap).
+/** @responsive : largeur du device ou la colonne sera à 100%
+/** @gutter : marge entre les colonnes
+/*************************************************************/
+.col-responsive(@int, @responsive:768, @gutter:30){
+	@value : 100/(12/@int);
+	@gap : (@gutter/2);
+	font-size:initial;
+	position: relative;
+	word-break: break-word;
+	display:inline-block;
+	vertical-align: top;
+	white-space: normal;
+	width: ~"@{value}%";
+	padding: 0 ~"@{gap}px";
+	@media (max-width: ~"@{responsive}px") {
+		width:100%;
+		display:block;
+		padding:0;
+		margin: ~"@{gap}px" 0;
+	}
+}

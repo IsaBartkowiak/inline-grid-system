@@ -1,0 +1,15 @@
+/** COLUMN ***************************************************/
+/** @int : desired columns, like bootstrap (int).
+/** @gutter : column spacing (px)
+/*************************************************************/
+.col(@int, @gutter:30){
+	@value : 100/(12/@int);
+	@gap : (@gutter/2);
+	font-size:initial;
+	position: relative;
+	word-break: break-word;
+	display:inline-block;
+	vertical-align: top;
+	width: ~"@{value}%";
+	padding: 0 ~"@{gap}px";
+}

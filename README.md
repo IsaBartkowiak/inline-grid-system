@@ -16,7 +16,7 @@ SOON
 
 ###Basic markup
 
-**La seule contrainte est de créer une div contenant vos colonnes (qui servira de row). Vos colonnes doivent avoir la classe ".col"
+**La seule contrainte est de créer une div contenant vos colonnes (qui servira de row). Vos colonnes doivent avoir la classe ".col" **
 
 ```html
 <div class="grid">
@@ -26,13 +26,13 @@ SOON
 	<div class="col"></div>
 </div>
 ```
-
+SCSS
 ```scss
 .grid{
-	@include grid(@col, @gutter);
+	@include grid($col, $gutter);
 }
 ```
-
+LESS
 ```less
 .grid{
 	.grid(@col, @gutter)
@@ -42,18 +42,20 @@ SOON
 
 Variables| Description| Unit | Default value
 --- | --- | --- | --- |
-`@col` | desired columns, like bootstrap | integer  | none
-`@gutter` | column spacing | pixel | 30px
+`$col` | desired columns, like bootstrap | integer  | none
+`$gutter` | column spacing | pixel | 30px
 
 
 ###Breakpoint management
+SCSS
 ```scss
 .grid{
-	@include become-grid(@col, @gutter, @breakpoint);
+	@include become-grid($col, $gutter, $breakpoint);
 }
 ```
 
-```scss
+LESS
+```less
 .grid{
 	.become-grid(@col, @gutter, @breakpoint);
 }
@@ -62,9 +64,9 @@ Variables| Description| Unit | Default value
 
 Variables| Description| Unit | Default value
 --- | --- | --- | --- |
-`@col` | desired columns, like bootstrap | integer  | none
-`@gutter` | column spacing | pixel | 30px
-``@breakpoint` | responsive breakpoint | pixel | none
+`$col` | desired columns, like bootstrap | integer  | none
+`$gutter` | column spacing | pixel | 30px
+``$breakpoint` | responsive breakpoint | pixel | none
 
 **WARNING:  Use this mixin only if a grid is initialized**
 

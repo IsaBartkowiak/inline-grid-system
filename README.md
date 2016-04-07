@@ -13,7 +13,7 @@ Inline-block grid system is an alternative to bootstrap for creating columns. It
 
 ###Basic markup
 
-**La seule contrainte est de créer une div contenant vos colonnes (qui servira de row). Vos colonnes doivent avoir la classe ".col"**
+**The only requirement is to create a div containing your columns (which will serve as a row) . Your columns must have the class " .col "**
 
 ```html
 <div class="grid">
@@ -63,7 +63,7 @@ Variables| Description| Unit | Default value
 --- | --- | --- | --- |
 `$col` | desired columns, like bootstrap | integer  | none
 `$gutter` | column spacing | pixel | 30px
-``$breakpoint` | responsive breakpoint | pixel | none
+`$breakpoint` | responsive breakpoint | pixel | none
 
 **WARNING:  Use this mixin only if a grid is initialized**
 
@@ -179,7 +179,7 @@ SCSS
 	&-grid{
 		@include grid(4,30);
 		@include become-grid(6,800);
-		@include become-grid(12,30);
+		@include become-grid(12,30,400);
 	}
 }
 ```
@@ -193,7 +193,7 @@ LESS
 	&-grid{
 		.grid(4,30);
 		.become-grid(6,800);
-		.become-grid(12,30);
+		.become-grid(12,30,400);
 	}
 }
 ```
